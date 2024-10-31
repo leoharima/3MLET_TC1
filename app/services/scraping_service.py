@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def raspa_exportacao(ano, tipo):
+def get_exportacao(ano, tipo):
     mapa = {"vinhos": 1, "espumantes": 2, "uvas": 3, "suco": 4}
     if tipo in mapa:
         tipo = mapa[tipo]
@@ -44,7 +44,7 @@ def raspa_exportacao(ano, tipo):
     return all_data
 
 
-def raspa_importacao(ano, tipo):
+def get_importacao(ano, tipo):
     mapa = {"vinhos": 1, "espumantes": 2, "frescas": 3, "passas": 4, "suco": 5}
     if tipo in mapa:
         tipo = mapa[tipo]
@@ -86,7 +86,7 @@ def raspa_importacao(ano, tipo):
     return all_data
 
 
-def raspa_comercializacao(ano):
+def get_comercializacao(ano):
     url = f"http://vitibrasil.cnpuv.embrapa.br/index.php?ano={ano}&opcao=opt_04"
 
     response = requests.get(url)
@@ -135,7 +135,7 @@ def raspa_comercializacao(ano):
     return all_data
 
 
-def raspa_processamento(ano, tipo):
+def get_processamento(ano, tipo):
     mapa = {"viniferas": 1, "americanas": 2, "uvas": 3, "sem_class": 4}
     if tipo in mapa:
         tipo = mapa[tipo]
@@ -188,7 +188,7 @@ def raspa_processamento(ano, tipo):
     return all_data
 
 
-def raspa_producao(ano):
+def get_producao(ano):
     url = f"http://vitibrasil.cnpuv.embrapa.br/index.php?ano={ano}&opcao=opt_02"
 
     response = requests.get(url)
