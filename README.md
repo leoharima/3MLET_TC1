@@ -80,7 +80,7 @@ intro_api/
 ### 1. Clone o Repositório
 
 ```bash
-git clone https://github.com/ileoh/flask_exemplo
+git clone https://github.com/leoharima/3MLET_TC1/
 cd my_flask_app
 ```
 
@@ -97,13 +97,13 @@ source venv/bin/activate  # No Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4. Execute o Aplicativo
+### 4. Execute a Aplicação
 
 ```bash
 python run.py
 ```
 
-O aplicativo estará disponível em `http://localhost:5000`.
+A aplicação estará disponível em `http://localhost:5000`.
 
 ## Plano de Arquitetura
 
@@ -112,11 +112,5 @@ O aplicativo estará disponível em `http://localhost:5000`.
 
 A documentação da API é gerada automaticamente com Swagger e está disponível em `http://localhost:5000/apidocs/`.
 
-## 🤝 Contribuindo
-
-1. Fork este repositório.
-2. Crie sua branch (`git checkout -b feature/nova-funcionalidade`).
-3. Faça commit das suas alterações (`git commit -m 'Adiciona nova funcionalidade'`).
-4. Faça push para sua branch (`git push origin feature/nova-funcionalidade`).
-5. Abra um Pull Request.
-instalar, configurar e usar o projeto. Ele também cobre contribuições, contato, licença e agradecimentos, tornando-o completo e fácil de entender para novos desenvolvedores.
+## 🤝 Equipe (Grupo 20)
+- Leonardo André Ferreira - RM359721
