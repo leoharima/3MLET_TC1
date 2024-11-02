@@ -9,7 +9,8 @@ from app.services.scraping_service import (
 )
 
 
-@app.route('/exportacao/<int:ano>/<tipo>', methods=['GET'])
+@app.route("/exportacao/<int:ano>/<tipo>", methods=["GET"])
+@auth.login_required
 def scrape_exportacao(ano, tipo):
     """
     Endpoint para obter dados de exportação
@@ -57,7 +58,8 @@ def scrape_exportacao(ano, tipo):
     return jsonify(get_exportacao(ano, tipo))
 
 
-@app.route('/importacao/<int:ano>/<tipo>', methods=['GET'])
+@app.route("/importacao/<int:ano>/<tipo>", methods=["GET"])
+@auth.login_required
 def scrape_importacao(ano, tipo):
     """
     Endpoint para obter dados de importação
@@ -105,7 +107,8 @@ def scrape_importacao(ano, tipo):
     return jsonify(get_importacao(ano, tipo))
 
 
-@app.route('/comercializacao/<int:ano>', methods=['GET'])
+@app.route("/comercializacao/<int:ano>", methods=["GET"])
+@auth.login_required
 def scrape_comercializacao(ano):
     """
     Endpoint para obter dados de comercialização
@@ -139,7 +142,8 @@ def scrape_comercializacao(ano):
     return jsonify(get_comercializacao(ano))
 
 
-@app.route('/processamento/<int:ano>/<tipo>', methods=['GET'])
+@app.route("/processamento/<int:ano>/<tipo>", methods=["GET"])
+@auth.login_required
 def scrape_processamento(ano, tipo):
     """
     Endpoint para obter dados de processamento
@@ -187,7 +191,8 @@ def scrape_processamento(ano, tipo):
     return jsonify(get_processamento(ano, tipo))
 
 
-@app.route('/producao/<int:ano>', methods=['GET'])
+@app.route("/producao/<int:ano>", methods=["GET"])
+@auth.login_required
 def scrape_producao(ano):
     """
     Endpoint para obter dados de produção
