@@ -1,4 +1,4 @@
-from flask import request, jsonify
+from flask import jsonify
 from app import app, auth
 from app.services.scraping_service import (
     get_exportacao,
