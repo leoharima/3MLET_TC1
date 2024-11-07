@@ -79,7 +79,7 @@ intro_api/
 
 ```bash
 git clone https://github.com/leoharima/3MLET_TC1/
-cd my_flask_app
+cd 3MLET_TC1
 ```
 
 ### 2. Crie um Ambiente Virtual
